@@ -5,19 +5,45 @@ from numeric_grade import NumericGrade
 from grading_system import GradingSystem
 
 # Create Courses
-math_course = Course("MATH101", "Introduction to Mathematics")
-physics_course = Course("PHYS101", "Physics Fundamentals")
+course_code_math = input("Enter the course code for Mathematics: ")
+course_name_math = input("Enter the course name for Mathematics: ")
+math_course = Course(course_code_math, course_name_math)
+
+course_code_physics = input("Enter the course code for Physics: ")
+course_name_physics = input("Enter the course name for Physics: ")
+physics_course = Course(course_code_physics, course_name_physics)
 
 # Create Students
-student1 = Student(1, "John Doe")
-student2 = Student(2, "Jane Smith")
+student_id1 = int(input("Enter the ID for the first student: "))
+student_name1 = input("Enter the name for the first student: ")
+student1 = Student(student_id1, student_name1)
+
+student_id2 = int(input("Enter the ID for the second student: "))
+student_name2 = input("Enter the name for the second student: ")
+student2 = Student(student_id2, student_name2)
 
 # Create Grades
-math_grade_student1 = LetterGrade("A")
-physics_grade_student1 = NumericGrade(85)
+math_grade_student1 = LetterGrade(
+    input(f"Enter the letter grade for {student1.name} in {math_course.course_name}: ")
+)
+physics_grade_student1 = NumericGrade(
+    float(
+        input(
+            f"Enter the numeric grade for {student1.name} in {physics_course.course_name}: "
+        )
+    )
+)
 
-math_grade_student2 = LetterGrade("B")
-physics_grade_student2 = NumericGrade(75)
+math_grade_student2 = LetterGrade(
+    input(f"Enter the letter grade for {student2.name} in {math_course.course_name}: ")
+)
+physics_grade_student2 = NumericGrade(
+    float(
+        input(
+            f"Enter the numeric grade for {student2.name} in {physics_course.course_name}: "
+        )
+    )
+)
 
 # Grade Students
 GradingSystem.grade_student(student1, math_course, math_grade_student1)
