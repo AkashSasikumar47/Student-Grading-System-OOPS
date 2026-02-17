@@ -1,56 +1,48 @@
 # Student Grading System
 
-This is a simple Student Grading System implemented in Python using Object-Oriented Programming principles. The system includes classes for courses, students, grades, and a grading system with polymorphism for different grading methods and encapsulation for grade security.
-
-## Table of Contents
-
-- [Features](#features)
-- [File Structure](#file-structure)
-- [Usage](#usage)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
+A simple Python-based student grading system demonstrating Object-Oriented Programming (OOP) principles including inheritance, polymorphism, and encapsulation.
 
 ## Features
 
-- **Course Class:** Represents a course with a course code and name.
-- **Student Class:** Represents a student with a student ID, name, and grades for different courses.
-- **Grade Classes:** Includes a base class for grades and subclasses for letter grades and numeric grades.
-- **GradingSystem Class:** Provides a static method to grade students for a particular course.
+- Manage courses with unique course codes
+- Track student grades with letter (A-F) or numeric formats
+- Automatic conversion of letter grades to GPA values
+- Type-safe grade assignment with validation
 
-## File Structure
-
-- **course.py:** Defines the Course class.
-- **student.py:** Defines the Student class.
-- **grade.py:** Defines the base Grade class.
-- **letter_grade.py:** Defines the LetterGrade class.
-- **numeric_grade.py:** Defines the NumericGrade class.
-- **grading_system.py:** Defines the GradingSystem class.
-- **main.py:** Main program for testing and demonstrating the functionality.
-
-## Usage
+## Quick Start
 
 1. Clone the repository:
+```bash
+git clone https://github.com/AkashSasikumar47/Student-Grading-System-OOPS.git
+cd Student-Grading-System-OOPS
+```
 
-   ```bash
-   git clone https://github.com/AkashSasikumar47/Student-Grading-System-OOPS.git
-1. Navigate to the project directory:
+2. Run the program:
+```bash
+python main.py
+```
 
-   ```bash
-   cd student-grading-system
-1. Run the main program:
+3. Follow the prompts to enter course details, student information, and grades.
 
-   ```bash
-   python main.py
-## Customization
+## Project Structure
 
-- Customize the grading logic in letter_grade.py based on your grading scale.
-- Extend the system by adding more features, validation checks, or additional grading methods.
+```
+├── course.py          # Course class (course code, name)
+├── student.py         # Student class (ID, name, grades)
+├── grade.py           # Base Grade class
+├── letter_grade.py    # LetterGrade subclass (A-F → GPA)
+├── numeric_grade.py   # NumericGrade subclass
+├── grading_system.py  # GradingSystem utility class
+└── main.py            # Demo application
+```
 
-## Customization
+## OOP Concepts Demonstrated
 
-Contributions are welcome! Feel free to open issues, submit pull requests, or provide feedback.
+- **Inheritance**: `LetterGrade` and `NumericGrade` inherit from `Grade`
+- **Polymorphism**: Different grade types with unified interface
+- **Encapsulation**: Grade validation and conversion logic hidden in classes
+- **Static Methods**: Utility methods in `GradingSystem`
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License

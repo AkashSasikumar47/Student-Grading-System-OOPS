@@ -1,3 +1,12 @@
+"""
+Student Grading System - Demo Application
+
+This program demonstrates the student grading system by:
+1. Creating courses and students
+2. Assigning letter and numeric grades
+3. Retrieving and displaying grades
+"""
+
 from course import Course
 from student import Student
 from letter_grade import LetterGrade
